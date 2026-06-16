@@ -12,7 +12,7 @@ function App() {
   // Fetch notes data
   const fetchNotes = () => {
     axios
-      .get("http://localhost:3000/api/notes")
+      .get("https://notes-app-fcsw.onrender.com/api/notes")
       .then((res) => {
         setNotes(res.data.note);
       })
@@ -28,7 +28,7 @@ function App() {
     if (editingId) {
       // UPDATE
       axios
-        .patch(`http://localhost:3000/api/notes/${editingId}`, {
+        .patch(`https://notes-app-fcsw.onrender.com/api/notes/${editingId}`, {
           title,
           description,
         })
@@ -47,7 +47,7 @@ function App() {
     } else {
       // CREATE
       axios
-        .post("http://localhost:3000/api/notes", {
+        .post("https://notes-app-fcsw.onrender.com/api/notes", {
           title,
           description,
         })
@@ -68,7 +68,7 @@ function App() {
   // Delete note api
   function handleDeleteNote(noteId) {
     axios
-      .delete("http://localhost:3000/api/notes/" + noteId)
+      .delete("https://notes-app-fcsw.onrender.com/api/notes/" + noteId)
       .then((res) => {
         console.log(res.data);
         fetchNotes();
