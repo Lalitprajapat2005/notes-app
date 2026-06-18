@@ -36,9 +36,25 @@ html{
   padding: 3rem;
   display: flex;
   gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+input{
+  height: 30px;
+  width: 200px;
+  border-radius: 5px;
 }
 
 .btn{
   display: flex;
   gap: 1rem;
+  
+}
+
+.submit{
+  height: 30px;
+  width: 80px;
+  border-radius: 1rem;
 }

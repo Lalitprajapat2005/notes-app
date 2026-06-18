@@ -111,7 +111,7 @@ function App() {
           required
         />
 
-        <button type="submit">
+        <button className="submit" type="submit">
           {editingId ? "Update Note" : "Create Note"}
         </button>
       </form>
