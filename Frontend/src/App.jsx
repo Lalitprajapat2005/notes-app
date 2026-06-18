@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faNoteSticky } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   const [notes, setNotes] = useState([]);
@@ -93,6 +95,7 @@ function App() {
   return (
     <>
       <form className="note-create-form" onSubmit={handleSubmit}>
+        <FontAwesomeIcon icon={faNoteSticky} />
         <input
           type="text"
           name="title"
